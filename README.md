@@ -13,6 +13,8 @@ An intelligent wardrobe management system designed to simplify clothing organiza
 ![Hardware](https://img.shields.io/badge/hardware-Raspberry%20Pi-green)
 ![Focus](https://img.shields.io/badge/focus-Accessibility-lightgrey)
 
+[Demo](PUT_DEMO_LINK_HERE) • [Website](PUT_WEBSITE_LINK_HERE) • [Screenshots](#screenshots) • [Installation](#installation)
+
 </div>
 
 ---
@@ -304,3 +306,4 @@ Supervised by:
 ---
 
 Developed as a graduation project focused on accessible technology, smart wardrobe management, and inclusive fashion support.
+
