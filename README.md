@@ -1,17 +1,20 @@
-🌟 Dithar - Smart Wardrobe System
-[Image blocked: Dithar Logo]
-An intelligent wardrobe management system empowering independence through accessible fashion technology
+  Dithar – Smart Wardrobe System
 
-developer.apple.com
- 
-swift.org
- 
-firebase.google.com
- 
-raspberrypi.org
- 
-🎥 View Demo [blocked] • 📱 Screenshots [blocked] • 📖 Documentation [blocked] • 
-#installation
+<div align="center">
+
+<img src="docs/dithar-logo.png" alt="Dithar Logo" width="180"/>
+
+### An intelligent wardrobe management system empowering independence through accessible fashion technology
+
+![Platform](https://img.shields.io/badge/platform-iOS-blue)
+![Language](https://img.shields.io/badge/language-Swift-orange)
+![Backend](https://img.shields.io/badge/backend-Firebase-yellow)
+![Hardware](https://img.shields.io/badge/hardware-Raspberry%20Pi-green)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
+🎥 Demo • 📱 Screenshots • 📖 Documentation
+
+</div>
 
 ---
 
