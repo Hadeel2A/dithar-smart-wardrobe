@@ -212,6 +212,8 @@ xcodebuild test -scheme DitharApp
 
 ---
 
+
+# 👥 Team
 | Name |
 |------|
 | Rahaf AlFantoukh |
@@ -264,6 +266,4 @@ xcodebuild test -scheme DitharApp
 
 ---
 
-⭐ **Star this repository if Dithar helps you organize your wardrobe**
-
-Made with ❤️ for accessible technology
+Developed as a graduation project to support accessible technology and inclusive fashion solutions.
