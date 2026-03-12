@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>دِثار | أناقة تُدار بذكاء</title>
+  <meta name="description" content="دِثار — تطبيق ذكي لتنظيم خزانة ملابسك واقتراح التنسيقات باستخدام الذكاء الاصطناعي وتقنية RFID.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#F9F7F3;
+      --text:#2F3A2F;
+      --muted:#5f6b5f;
+      --brand:#7B8C68;
+      --brand-2:#9DAE8C;
+      --card:#FFFFFF;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:"Tajawal", system-ui, -apple-system, Tahoma, Arial, sans-serif;
+    }
+    .container{max-width:1100px;margin:auto;padding:0 20px}
+    header{
+      position:sticky; top:0; z-index:10;
+      background:rgba(249,247,243,.8); backdrop-filter:saturate(180%) blur(8px);
+      border-bottom:1px solid #ece9e3;
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
+    .brand img{height:36px; width:auto}
+    .brand-title{font-weight:800; letter-spacing:.2px}
+    .nav a.cta{
+      padding:10px 16px; border-radius:10px; text-decoration:none; color:#fff;
+      background:linear-gradient(90deg,var(--brand),var(--brand-2));
+      font-weight:700;
+    }
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:30px; padding:60px 0}
+    .hero h1{font-size:42px; line-height:1.2; margin:0 0 12px}
+    .hero p{font-size:18px; color:var(--muted); margin:0 0 22px}
+    .buttons{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{
+      padding:12px 18px; border-radius:12px; text-decoration:none; font-weight:700;
+      display:inline-block;
+    }
+    .btn.primary{color:#fff; background:linear-gradient(90deg,var(--brand),var(--brand-2))}
+    .btn.ghost{color:var(--text); border:1px solid #d9d5cf; background:#fff}
+    .card{
+      background:var(--card); border:1px solid #eee; border-radius:16px; padding:22px;
+      box-shadow:0 8px 20px rgba(0,0,0,.04);
+    }
+    /* Features */
+    .features{padding:10px 0 60px}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .feat h3{margin:0 0 8px; font-size:18px}
+    .feat p{margin:0; color:var(--muted)}
+    /* Contact */
+    .contact{padding:50px 0}
+    .contact .card{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .links{display:flex; gap:12px; flex-wrap:wrap}
+    .links a{color:#fff; text-decoration:none; padding:10px 14px; border-radius:10px; background:var(--brand)}
+    footer{padding:24px 0; color:#8a8a8a; border-top:1px solid #ece9e3; text-align:center}
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr; text-align:center}
+      .contact .card{flex-direction:column; align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <img src="logo.png" alt="شعار دِثار">
+        <span class="brand-title">دِثار</span>
+      </a>
+      <a class="cta" href="#contact">تواصل معنا</a>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <h1>دِثار — أناقة تُدار بذكاء</h1>
+        <p>تطبيق ذكي ينظم خزانتك، يقترح تنسيقات مناسبة، ويتتبع قطعك باستخدام الذكاء الاصطناعي وتقنية RFID.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#features">تعرّف على المزايا</a>
+          <a class="btn ghost" href="#contact">قريبًا على App&nbsp;Store</a>
+        </div>
+      </div>
+      <div class="card" aria-hidden="true">
+        <img src="/assets/logo.png" alt="" style="width:100%; max-width:360px; display:block; margin:0 auto; opacity:.95">
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+      <div class="grid">
+        <div class="card feat">
+          <h3>اقتراح تنسيقات ذكي</h3>
+          <p>خوارزميات ترشح لك إطلالات يومية حسب الطقس والمناسبة والألوان المفضلة.</p>
+        </div>
+        <div class="card feat">
+          <h3>تتبّع وتنظيم بالخزانه</h3>
+          <p>سجّلي القطع وصوّريها ورتّبيها في مجموعات، واعرفي عدد مرات الاستخدام.</p>
+        </div>
+        <div class="card feat">
+          <h3>تكامل RFID (اختياري)</h3>
+          <p>تعرف تلقائي على القطع المعلّمة لتسريع عملية الاختيار والجرد.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="card">
+        <div>
+          <h3 style="margin:0 0 6px">تواصل معنا</h3>
+          <p style="margin:0; color:var(--muted)">يسعدنا سماع اقتراحاتك وتجربتك مع دِثار.</p>
+        </div>
+        <div class="links">
+          <a href="mailto:dithar.project@gmail.com" aria-label="البريد">البريد</a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener">إنستغرام</a>
+          <a href="https://x.com/" target="_blank" rel="noopener">X (تويتر)</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> دِثار — جميع الحقوق محفوظة.
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

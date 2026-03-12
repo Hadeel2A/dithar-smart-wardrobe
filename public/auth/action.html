@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>دِثار | معالجة الرابط</title>
+  <style>
+    :root{--bg:#F9F7F3;--text:#2F3A2F;--brand:#7B8C68;--brand2:#9DAE8C}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:"Tajawal",system-ui,-apple-system,Tahoma,Arial,sans-serif;
+      display:grid; place-items:center; text-align:center; direction:rtl
+    }
+    .card{
+      background:#fff; border:1px solid #eee; border-radius:16px;
+      padding:28px 22px; width:min(92vw,440px);
+      box-shadow:0 10px 24px rgba(0,0,0,.06)
+    }
+    img{height:44px; margin-bottom:10px}
+    h3{margin:8px 0 6px}
+    p{margin:0 0 14px; color:#666}
+    a.btn{
+      display:inline-block; margin-top:6px; text-decoration:none; color:#fff;
+      padding:10px 18px; border-radius:10px; font-weight:700;
+      background:linear-gradient(90deg,var(--brand),var(--brand2))
+    }
+    .hint{font-size:12px; color:#888; margin-top:10px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="logo.png" alt="شعار دِثار">
+    <h3>جارٍ فتح الصفحة المطلوبة…</h3>
+    <p>سنحوّلك لمعالجة الطلب (إعادة تعيين كلمة المرور/تأكيد البريد).</p>
+
+    <!-- زر احتياطي في حال لم يتم التحويل تلقائيًا -->
+    <a id="link" class="btn" href="#">متابعة الآن</a>
+    <div class="hint">إذا لم يتم التحويل تلقائيًا خلال ثانية، اضغط الزر.</div>
+  </div>
+
+  <script>
+    // اجلب الاستعلام القادم من الإيميل (mode, oobCode, apiKey, lang…)
+    var qs = location.search || "";
+    // صفحة Firebase الداخلية التي تنفّذ العملية
+    var target = "/__/auth/action" + qs;
+
+    // حدّث زر المتابعة ثم حوّل تلقائيًا
+    document.getElementById("link").href = target;
+    setTimeout(function(){ location.href = target; }, 800);
+  </script>
+</body>
+</html>

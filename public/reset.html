@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>إعادة تعيين كلمة المرور | دِثار</title>
+
+  <!-- Firebase -->
+  <script defer src="/__/firebase/12.4.0/firebase-app-compat.js"></script>
+  <script defer src="/__/firebase/12.4.0/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+
+  <style>
+    :root{
+      --bg:#f7f5f0; --card:#ffffff; --text:#1c1c1c;
+      --brand:#5f7b5f; --muted:#7b887b; --danger:#b44343;
+      --success:#2e7d32; --border:#e6e3dc;
+    }
+    body{
+      margin:0;
+      background:var(--bg);
+      font-family:system-ui,"Segoe UI",Tahoma,Arial;
+    }
+    * {
+  box-sizing: border-box;
+}
+
+    .container{
+      max-width:560px;
+      margin:40px auto;
+      padding:20px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:16px;
+      box-shadow:0 8px 30px rgba(0,0,0,.06);
+      padding:28px;
+    }
+    h1{
+      margin:8px 0 16px;
+      font-size:22px;
+      color:var(--text);
+    }
+    p{
+      margin:0 0 12px;
+      color:var(--muted);
+      line-height:1.8;
+    }
+   .input{
+  width:100%;
+  padding:14px 16px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  font-size:15px;
+  outline:none;
+  background:#fff;
+  box-sizing:border-box; 
+}
+
+    .input:focus{
+      border-color:var(--brand);
+    }
+    .btn{
+      width:100%;
+      padding:14px 16px;
+      background:var(--brand);
+      color:#fff;
+      border:0;
+      border-radius:12px;
+      font-weight:600;
+      cursor:pointer;
+      transition:background .2s, transform .1s, box-shadow .1s;
+    }
+    .btn:hover:not(:disabled){
+      transform:translateY(-1px);
+      box-shadow:0 4px 12px rgba(0,0,0,.08);
+    }
+    .btn:disabled{
+      opacity:.6;
+      cursor:not-allowed;
+      box-shadow:none;
+      transform:none;
+    }
+    .err{
+      color:var(--danger);
+      font-size:13px;
+      margin-top:8px;
+    }
+    .ok{
+      color:var(--success);
+      font-size:13px;
+      margin-top:8px;
+    }
+    .hr{
+      height:1px;
+      background:#eee;
+      margin:20px 0;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-bottom:14px;
+    }
+    .logo{
+      height:36px;
+    }
+    .hint{
+      font-size:13px;
+      color:#9aa39a;
+    }
+ 
+    .rules{
+      margin-top:10px;
+      font-size:13px;
+    }
+    .rule{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin-top:4px;
+      color:var(--muted);
+    }
+    .rule .icon{
+      width:16px;
+      height:16px;
+      border-radius:999px;
+      border:2px solid #c1c7c1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:11px;
+      color:#c1c7c1;
+      box-sizing:border-box;
+    }
+    .rule .icon::before{
+      content:"✓";
+      opacity:0.12; 
+    }
+    .rule.valid{
+      color:var(--success);
+    }
+    .rule.valid .icon{
+      border-color:var(--success);
+      color:var(--success);
+    }
+    .rule.valid .icon::before{
+      opacity:1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+
+      <div class="brand">
+        <img src="logo.png" class="logo" alt="Dithar">
+        <strong>دِثار — أناقة تُدار بذكاء</strong>
+      </div>
+
+      <!-- Loading -->
+      <div id="view-loading">
+        <h1>جاري التحقق من الرابط…</h1>
+        <p>نقوم بالتأكد من صلاحية رابط إعادة تعيين كلمة المرور.</p>
+      </div>
+
+      <!-- Reset Form -->
+      <div id="view-reset" style="display:none">
+        <h1>إدخال كلمة مرور جديدة</h1>
+        <p>ستُطبَّق كلمة المرور الجديدة على حسابك في دِثار.</p>
+
+        <div class="hr"></div>
+
+        <input id="pwd" type="password" class="input" placeholder="كلمة المرور الجديدة" />
+        <input id="pwd2" type="password" class="input" placeholder="تأكيد كلمة المرور" style="margin-top:10px"/>
+
+        <div class="rules">
+          <div class="rule" id="rule-length">
+            <div class="icon"></div>
+            ٨ أحرف على الأقل
+          </div>
+          <div class="rule" id="rule-upper">
+            <div class="icon"></div>
+            تحتوي على حرف كبير واحد على الأقل (A-Z)
+          </div>
+          <div class="rule" id="rule-lower">
+            <div class="icon"></div>
+            تحتوي على حرف صغير واحد على الأقل (a-z)
+          </div>
+          <div class="rule" id="rule-digit">
+            <div class="icon"></div>
+            تحتوي على رقم واحد على الأقل (0-9)
+          </div>
+          <div class="rule" id="rule-special">
+            <div class="icon"></div>
+            تحتوي على رمز واحد على الأقل (! @ # $ % & * ... )
+          </div>
+        </div>
+
+        <div id="msg" class=""></div>
+
+        <button id="btn" class="btn" style="margin-top:14px">
+          تعيين كلمة المرور
+        </button>
+
+     
+      </div>
+
+      <!-- Done -->
+      <div id="view-done" style="display:none">
+        <h1>تم تغيير كلمة المرور بنجاح</h1>
+        <p>يمكنك الآن العودة للتطبيق وتسجيل الدخول باستخدام كلمة المرور الجديدة.</p>
+      </div>
+
+      <!-- Error -->
+      <div id="view-error" style="display:none">
+        <h1>تعذّر تنفيذ الطلب</h1>
+        <p id="errorText" class="err">رابط غير صالح أو منتهي. يرجى طلب إعادة تعيين جديدة.</p>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+  const params = new URLSearchParams(location.search);
+  const mode   = params.get('mode');
+  const oob    = params.get('oobCode');
+
+  const vLoading = document.getElementById('view-loading');
+  const vReset   = document.getElementById('view-reset');
+  const vDone    = document.getElementById('view-done');
+  const vError   = document.getElementById('view-error');
+  const errorText = document.getElementById('errorText');
+
+  const msgEl   = document.getElementById('msg');
+  const btn     = document.getElementById('btn');
+  const pwd     = document.getElementById('pwd');
+  const pwd2    = document.getElementById('pwd2');
+
+  const ruleLength  = document.getElementById('rule-length');
+  const ruleUpper   = document.getElementById('rule-upper');
+  const ruleLower   = document.getElementById('rule-lower');
+  const ruleDigit   = document.getElementById('rule-digit');
+  const ruleSpecial = document.getElementById('rule-special');
+
+  function show(el){
+    [vLoading, vReset, vDone, vError].forEach(e => e.style.display = 'none');
+    el.style.display = 'block';
+  }
+
+  function mapError(e){
+    const code = (e && e.code) ? String(e.code) : "";
+    if (code.includes('expired'))       return 'انتهت صلاحية رابط إعادة التعيين. يرجى طلب رابط جديد.';
+    if (code.includes('invalid'))       return 'رابط إعادة التعيين غير صالح.';
+    if (code.includes('user-not-found'))return 'لا يوجد حساب مرتبط بهذا الرابط.';
+    if (code.includes('weak-password')) return 'كلمة المرور لا تحقق شروط الأمان الموضّحة.';
+    return 'حدث خطأ غير متوقع أثناء تغيير كلمة المرور. يرجى المحاولة لاحقًا.';
+  }
+
+  function updateRules(password){
+    const hasLength  = password.length >= 8;
+    const hasUpper   = /[A-Z]/.test(password);
+    const hasLower   = /[a-z]/.test(password);
+    const hasDigit   = /[0-9]/.test(password);
+    const hasSpecial = /[^A-Za-z0-9]/.test(password);
+
+    ruleLength.classList.toggle('valid', hasLength);
+    ruleUpper.classList.toggle('valid', hasUpper);
+    ruleLower.classList.toggle('valid', hasLower);
+    ruleDigit.classList.toggle('valid', hasDigit);
+    ruleSpecial.classList.toggle('valid', hasSpecial);
+
+    return hasLength && hasUpper && hasLower && hasDigit && hasSpecial;
+  }
+
+  async function waitForFirebase(){
+    if (window.firebase && firebase.apps && firebase.apps.length) return;
+    await new Promise(resolve => {
+      const iv = setInterval(() => {
+        if (window.firebase && firebase.apps && firebase.apps.length){
+          clearInterval(iv);
+          resolve();
+        }
+      }, 50);
+      setTimeout(() => { clearInterval(iv); resolve(); }, 2000);
+    });
+  }
+
+  if (mode !== 'resetPassword' || !oob) {
+    show(vError);
+    errorText.textContent = 'رابط غير صالح. يرجى التأكد من فتح الرابط من رسالة البريد الأخيرة.';
+  } else {
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        await waitForFirebase();
+        const auth = firebase.auth();
+
+        await auth.verifyPasswordResetCode(oob);
+
+        show(vReset);
+
+        pwd.addEventListener('input', () => {
+          updateRules(pwd.value.trim());
+          msgEl.textContent = '';
+          msgEl.className = '';
+        });
+        pwd2.addEventListener('input', () => {
+          msgEl.textContent = '';
+          msgEl.className = '';
+        });
+
+        async function submitNewPassword(){
+          msgEl.textContent = '';
+          msgEl.className = '';
+
+          const p1 = pwd.value.trim();
+          const p2 = pwd2.value.trim();
+
+          const okComplex = updateRules(p1);
+          if (!okComplex) {
+            msgEl.textContent = 'الرجاء استيفاء جميع شروط كلمة المرور الموضّحة.';
+            msgEl.className = 'err';
+            return;
+          }
+
+          if (p1 !== p2) {
+            msgEl.textContent = 'كلمتا المرور غير متطابقتين.';
+            msgEl.className = 'err';
+            return;
+          }
+
+          btn.disabled = true;
+          try {
+         
+            await auth.confirmPasswordReset(oob, p1);
+            show(vDone);
+          } catch (e) {
+            msgEl.textContent = mapError(e);
+            msgEl.className = 'err';
+            btn.disabled = false;
+          }
+        }
+
+        btn.addEventListener('click', submitNewPassword);
+        [pwd, pwd2].forEach(input => {
+          input.addEventListener('keydown', e => {
+            if (e.key === 'Enter') submitNewPassword();
+          });
+        });
+
+      } catch (e) {
+        show(vError);
+        errorText.textContent = mapError(e);
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
+
