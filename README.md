@@ -1,31 +1,31 @@
-# 🌟 Dithar - Smart Wardrobe System
+# 🌟 Dithar – Smart Wardrobe System
 
-An intelligent wardrobe management system empowering independence through accessible fashion technology
+An intelligent wardrobe management system empowering independence through accessible fashion technology.
 
 🎥 **View Demo** • 📱 **Screenshots** • 📖 **Documentation** • 🚀 **Installation**
 
 ---
 
-# 🌍 Overview
+## 🌍 Overview
 
-Dithar revolutionizes wardrobe management by combining **AI-powered clothing recognition**, **RFID tracking technology**, and **accessibility features** to create an inclusive fashion companion.
+**Dithar** is a smart wardrobe management system that integrates **AI-powered clothing recognition**, **RFID tracking technology**, and **accessibility features** to create an inclusive fashion companion.
 
-Specifically designed to empower **individuals with visual impairments**, Dithar enables independent outfit selection while also helping all users organize their wardrobes more intelligently.
+The system is designed to empower **individuals with visual impairments** by enabling independent clothing identification and outfit coordination, while also helping all users manage their wardrobes more efficiently.
 
 ---
 
-# ✨ Key Highlights
+## ✨ Key Highlights
 
 - 🤖 **AI-Powered Recognition** – Automatically identifies clothing category, color, and patterns  
 - 📡 **Real-time RFID Tracking** – Detects items inside or outside the wardrobe  
 - 🎙️ **Voice Accessibility** – Audio descriptions using VoiceOver and AVSpeechSynthesizer  
 - 👗 **Smart Recommendations** – AI suggests outfits based on user preferences  
-- 🌐 **Community Platform** – Share and discover outfit inspirations  
+- 🌐 **Community Platform** – Share and explore outfit inspirations  
 - 🇸🇦 **Arabic Support** – Full localization for Arabic-speaking users  
 
 ---
 
-# 🎯 Problem Statement
+## 🎯 Problem Statement
 
 ### For visually impaired individuals
 Selecting and coordinating outfits independently can be challenging and often requires assistance from others.
@@ -34,53 +34,53 @@ Selecting and coordinating outfits independently can be challenging and often re
 Cluttered wardrobes lead to forgotten items, duplicate purchases, and decision fatigue when deciding what to wear.
 
 ### Dithar’s Solution
-A comprehensive **smart wardrobe system** that digitalizes clothing inventory, provides intelligent recommendations, and offers full accessibility support.
+A **smart wardrobe system** that digitalizes clothing inventory, provides intelligent outfit recommendations, and offers full accessibility support.
 
 ---
 
-# 🏗 System Architecture
+## 🏗 System Architecture
 
 | Component | Technology | Purpose |
 |-----------|------------|--------|
 | Mobile App | iOS (Swift / SwiftUI) | User interface |
-| Cloud Backend | Firebase Firestore | Real-time synchronization |
+| Cloud Backend | Firebase Firestore | Real-time data synchronization |
 | AI Recognition | CLIP Model | Clothing classification |
-| RFID System | UHF RFID + Raspberry Pi | Physical item tracking |
+| RFID System | UHF RFID + Raspberry Pi | Physical clothing tracking |
 | Background Removal | remBG API | Image preprocessing |
 | Voice Synthesis | AVSpeechSynthesizer | Audio descriptions |
 
 ---
 
-# 🚀 Features
+## 🚀 Features
 
-## 📱 Smart Wardrobe Management
+### 📱 Smart Wardrobe Management
 
-- Auto-recognition of clothing items using AI
+- AI recognition of clothing items
 - Manual editing of clothing attributes
 - RFID tag integration with wardrobe items
 - Real-time wardrobe availability tracking
 
-## 👔 Intelligent Outfit Creation
+### 👔 Intelligent Outfit Creation
 
 - Category-based outfit generation
-- Preference learning from user behavior
+- Preference learning based on user behavior
 - Save outfits for specific occasions
 - Outfit validation to ensure correct combinations
 
-## ♿ Accessibility Excellence
+### ♿ Accessibility Excellence
 
 - VoiceOver compatibility
-- Detailed audio clothing descriptions
+- Detailed audio descriptions
 - Accessible gesture navigation
 - Arabic & English interface support
 
-## 🌍 Community Features
+### 🌍 Community Features
 
 - Share outfits with other users
-- Discover outfit inspiration
+- Discover outfit inspirations
 - Like and comment on community posts
 
-## 📊 Analytics & Insights
+### 📊 Analytics & Insights
 
 - Track clothing usage frequency
 - Identify rarely used items
@@ -88,17 +88,17 @@ A comprehensive **smart wardrobe system** that digitalizes clothing inventory, p
 
 ---
 
-# 📱 Screenshots
+## 📱 Screenshots
 
-| Wardrobe View | Outfit Creation | Community Feed | Accessibility |
-|---------------|----------------|----------------|--------------|
+| Wardrobe | Outfits | Community | Accessibility |
+|----------|---------|----------|--------------|
 | ![](screenshots/wardrobe.png) | ![](screenshots/outfits.png) | ![](screenshots/community.png) | ![](screenshots/voice.png) |
 
 ---
 
-# 🛠 Installation
+## 🛠 Installation
 
-## Prerequisites
+### Prerequisites
 
 - iPhone running **iOS 15+**
 - **Xcode 14+**
@@ -106,13 +106,11 @@ A comprehensive **smart wardrobe system** that digitalizes clothing inventory, p
 
 ### Optional Hardware
 
-- Raspberry Pi 4 Model B
-- UHF RFID Reader
-- Washable UHF RFID Tags
+- Raspberry Pi 4 Model B  
+- UHF RFID Reader  
+- Washable UHF RFID Tags  
 
 ---
-
-# Quick Start
 
 ### Clone the Repository
 
@@ -121,7 +119,7 @@ git clone https://github.com/Hadeel2A/dithar-smart-wardrobe.git
 cd dithar-smart-wardrobe
 ```
 
-### Setup iOS App
+### Setup the iOS App
 
 ```bash
 cd mobile-app/DitharApp
@@ -143,61 +141,61 @@ python3 rfid_controller.py
 
 ### Build and Run
 
-1. Select device in Xcode  
-2. Press **⌘ + R**
+1. Select your device in Xcode  
+2. Press **⌘ + R** to build and run  
 
 ---
 
-# 🔧 Technology Stack
+## 🔧 Technology Stack
 
-## Mobile Application
+### Mobile Application
 
-- SwiftUI
-- UIKit
-- MVVM Architecture
+- SwiftUI  
+- UIKit  
+- MVVM Architecture  
 
-## Backend
+### Backend
 
-- Firebase Firestore
-- Firebase Authentication
-- Firebase Storage
+- Firebase Firestore  
+- Firebase Authentication  
+- Firebase Storage  
 
-## AI & Image Processing
+### AI & Image Processing
 
-- CLIP Vision Model
-- remBG background removal
-- Rule-based recommendation engine
+- CLIP Vision Model  
+- remBG background removal  
+- Rule-based recommendation engine  
 
-## Hardware Integration
+### Hardware Integration
 
-- Raspberry Pi 4
-- UHF RFID Reader
-- Python + Firebase Admin SDK
+- Raspberry Pi 4  
+- UHF RFID Reader  
+- Python with Firebase Admin SDK  
 
 ---
 
-# 📊 Performance Metrics
+## 📊 Performance Metrics
 
 | Metric | Target | Achieved |
 |------|------|------|
-| App Load Time | <3s | ✅ 2.1s |
-| RFID Detection | <2s | ✅ 1.8s |
-| AI Recognition | <3s | ✅ 2.5s |
-| Post Upload | <10s | ✅ 7.2s |
+| App Load Time | < 3s | ✅ 2.1s |
+| RFID Detection | < 2s | ✅ 1.8s |
+| AI Recognition | < 3s | ✅ 2.5s |
+| Post Upload | < 10s | ✅ 7.2s |
 | System Availability | 99% | ✅ 99.2% |
 
 ---
 
-# 🧪 Testing
+## 🧪 Testing
 
-## User Acceptance Testing
+### User Acceptance Testing
 
 - Participants: 8 users  
 - Visually impaired users included  
 - Test cases: 20  
 - Success rate: **95%**
 
-## Accessibility Testing
+### Accessibility Testing
 
 - VoiceOver support ✅  
 - Screen reader compatibility ✅  
@@ -214,13 +212,19 @@ xcodebuild test -scheme DitharApp
 
 ## 👥 Team
 
-| Role | Name |
-|-----|-----|
-| Scrum Master & Lead Developer | Rahaf AlFantoukh |
-| UI/UX Designer | Hadeel Almutairi |
-| AI Engineer | Maha Alswed |
-| Hardware Specialist | Fatmah Alsufaian |
-| Supervisor | Dr. Wejdan Alkhaldi |
+<div align="center">
+
+Rahaf AlFantoukh  
+Hadeel Almutairi  
+Maha Alswed  
+Fatmah Alsufaian  
+Dr. Wejdan Alkhaldi  
+
+</div>
+
+---
+
+## 🌟 Impact
 
 ### Academic Recognition
 
@@ -236,25 +240,25 @@ xcodebuild test -scheme DitharApp
 
 ---
 
-# 🚧 Future Roadmap
+## 🚧 Future Roadmap
 
 ### Version 2.0
 
-- Android version
-- Weather-based outfit recommendations
-- AR virtual try-on
-- Enhanced community features
+- Android version  
+- Weather-based outfit recommendations  
+- AR virtual try-on  
+- Enhanced community features  
 
 ### Version 3.0
 
-- Smart mirror integration
-- E-commerce integration
-- Professional styling assistance
-- Global localization support
+- Smart mirror integration  
+- E-commerce integration  
+- Professional styling assistance  
+- Global localization support  
 
 ---
 
-# 🙏 Acknowledgments
+## 🙏 Acknowledgments
 
 - King Saud University  
 - Saudi Vision 2030 innovation initiatives  
@@ -263,4 +267,4 @@ xcodebuild test -scheme DitharApp
 
 ---
 
-Developed as a graduation project to support accessible technology and inclusive fashion solutions.
+Developed as a **graduation project focused on accessible technology and inclusive fashion solutions**.
