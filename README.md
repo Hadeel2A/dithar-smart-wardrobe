@@ -11,7 +11,7 @@
 ![Language](https://img.shields.io/badge/language-Swift-orange)
 ![Backend](https://img.shields.io/badge/backend-Firebase-yellow)
 ![Hardware](https://img.shields.io/badge/hardware-Raspberry%20Pi-green)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
 
 🎥 Demo • 📱 Screenshots • 📖 Documentation
 
