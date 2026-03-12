@@ -1,22 +1,22 @@
-  Dithar – Smart Wardrobe System
+
+🌟 Dithar - Smart Wardrobe System
 
 <div align="center">
 
-<img src="docs/dithar-logo.png" alt="Dithar Logo" width="180"/>
+!Dithar Logo
 
-### An intelligent wardrobe management system empowering independence through accessible fashion technology
+An intelligent wardrobe management system empowering independence through accessible fashion technology
 
-![Platform](https://img.shields.io/badge/platform-iOS-blue)
-![Language](https://img.shields.io/badge/language-Swift-orange)
-![Backend](https://img.shields.io/badge/backend-Firebase-yellow)
-![Hardware](https://img.shields.io/badge/hardware-Raspberry%20Pi-green)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
+![iOS](https://developer.apple.com/ios/)
+![Swift](https://swift.org/)
+![Firebase](https://firebase.google.com/)
+![Raspberry Pi](https://www.raspberrypi.org/)
+![License](LICENSE)
 
-🎥 Demo • 📱 Screenshots • 📖 Documentation
+🎥 View Demo • 📱 Screenshots • 📖 Documentation • 🚀 Installation
 
 </div>
 
----
 
 ## 🌍 Overview
 
@@ -280,3 +280,13 @@ Dr. Wejdan Alkhaldi
 ---
 
 Developed as a **graduation project focused on accessible technology and inclusive fashion solutions**.
+
+
+
+
+
+
+
+
+
+
