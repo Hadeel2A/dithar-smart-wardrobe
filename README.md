@@ -212,17 +212,17 @@ xcodebuild test -scheme DitharApp
 
 ---
 
+## 👥 Team
 
-# 👥 Team
-| Name |
-|------|
-| Rahaf AlFantoukh |
-| Hadeel Almutairi |
-| Maha Alswed |
-| Fatmah Alsufaian |
-| Dr. Wejdan Alkhaldi |
----
+<div align="center">
 
+Rahaf AlFantoukh  
+Hadeel Almutairi  
+Maha Alswed  
+Fatmah Alsufaian  
+Dr. Wejdan Alkhaldi  
+
+</div>
 # 🌟 Impact
 
 ### Academic Recognition
