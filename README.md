@@ -278,12 +278,25 @@ Dithar delivers value in several ways:
 
 ## Screenshots
 
-| Wardrobe | Outfits | Community | Accessibility |
-|----------|---------|-----------|---------------|
-| ![](screenshots/wardrobe.png) | ![](screenshots/outfits.png) | ![](screenshots/community.png) | ![](screenshots/voice.png) |
+### Wardrobe Interface
+<div align="center">
+  <img src="screenshots/wardrobe.png" alt="Wardrobe Interface" width="320"/>
+</div>
 
----
+### Outfit Interface
+<div align="center">
+  <img src="screenshots/outfits.png" alt="Outfit Interface" width="320"/>
+</div>
 
+### Community Interface
+<div align="center">
+  <img src="screenshots/community.png" alt="Community Interface" width="320"/>
+</div>
+
+### Accessibility Interface
+<div align="center">
+  <img src="screenshots/voice.png" alt="Accessibility Interface" width="320"/>
+</div>
 ## Team
 
 Prepared by:
@@ -308,5 +321,6 @@ Supervised by:
 ---
 
 Developed as a graduation project focused on accessible technology, smart wardrobe management, and inclusive fashion support.
+
 
 
