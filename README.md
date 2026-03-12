@@ -214,16 +214,13 @@ xcodebuild test -scheme DitharApp
 
 ## 👥 Team
 
-<div align="center">
-
-Rahaf AlFantoukh  
-Hadeel Almutairi  
-Maha Alswed  
-Fatmah Alsufaian  
-Dr. Wejdan Alkhaldi  
-
-</div>
-# 🌟 Impact
+| Role | Name |
+|-----|-----|
+| Scrum Master & Lead Developer | Rahaf AlFantoukh |
+| UI/UX Designer | Hadeel Almutairi |
+| AI Engineer | Maha Alswed |
+| Hardware Specialist | Fatmah Alsufaian |
+| Supervisor | Dr. Wejdan Alkhaldi |
 
 ### Academic Recognition
 
