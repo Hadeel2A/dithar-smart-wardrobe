@@ -1,8 +1,17 @@
-# 🌟 Dithar – Smart Wardrobe System
+🌟 Dithar - Smart Wardrobe System
+[Image blocked: Dithar Logo]
+An intelligent wardrobe management system empowering independence through accessible fashion technology
 
-An intelligent wardrobe management system empowering independence through accessible fashion technology.
-
-🎥 **View Demo** • 📱 **Screenshots** • 📖 **Documentation** • 🚀 **Installation**
+developer.apple.com
+ 
+swift.org
+ 
+firebase.google.com
+ 
+raspberrypi.org
+ 
+🎥 View Demo [blocked] • 📱 Screenshots [blocked] • 📖 Documentation [blocked] • 
+#installation
 
 ---
 
