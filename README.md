@@ -30,7 +30,9 @@ The system is designed for both ordinary users and visually impaired users. It s
 ## Project Preview
 
 <div align="center">
-  <img src="screenshots/dithar-cover.png" alt="Dithar Cover" width="300"/>
+  <img src="screenshots/dithar-cover.png" alt="Dithar Cover" width="260"/>
+  <img src="screenshots/wardrobe.png" alt="Wardrobe Interface" width="260"/>
+  <img src="screenshots/outfits.png" alt="Outfit Interface" width="260"/>
 </div>
 
 ---
@@ -306,4 +308,5 @@ Supervised by:
 ---
 
 Developed as a graduation project focused on accessible technology, smart wardrobe management, and inclusive fashion support.
+
 
