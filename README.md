@@ -143,22 +143,6 @@ Dithar combines a mobile application, AI recognition, cloud data management, and
 The workflow begins when a user captures a clothing image. The system then recognizes the clothing item, optionally allows the user to modify additional details, supports RFID linking, and finally saves the clothing item into the wardrobe system.
 
 ---
-
-## Project Scope
-
-The scope of Dithar includes:
-- an iOS mobile application
-- RFID-based clothing tracking
-- AI-based clothing recognition
-- digital wardrobe organization
-- outfit recommendations
-- auditory descriptions
-- Arabic language support
-
-Advanced functions such as augmented reality fitting, fabric analysis, and e-commerce integration are outside the current project scope.
-
----
-
 ## Project Objectives
 
 ### Product Objectives
