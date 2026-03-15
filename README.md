@@ -124,30 +124,6 @@ These features promote engagement and provide additional outfit ideas.
 
 ---
 
-## Interfaces
-
-The project interface is organized around the main user tasks and core flows of the system.
-
-### Wardrobe Management Interface
-Displays stored items, item details, and wardrobe organization functions such as filtering and browsing.
-
-### Add Item Interface
-Captures a clothing image, reviews recognition results, and links the clothing item to RFID data before saving it.
-
-### Outfit Creation Interface
-Allows users to select clothing items, visually arrange outfits, and save combinations for later use.
-
-### Recommendation Interface
-Presents suggested outfit combinations based on available items, preferences, weather, and occasion.
-
-### Community Interface
-Allows users to browse shared outfit posts, interact with community content, and match similar looks from their own wardrobe.
-
-### Accessibility Interface
-Supports users with audio descriptions and voice-guided interaction for clothing information and navigation.
-
----
-
 ## System Architecture
 
 <div align="center">
