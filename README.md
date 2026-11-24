@@ -1,19 +1,22 @@
+
 # Dithar
-### Smart Wardrobe System
+### AI-Powered Accessible Smart Wardrobe
 
 <div align="center">
 
 <img src="docs/logo.png" alt="Dithar Logo" width="170"/>
 
-An intelligent wardrobe management system designed to simplify clothing organization through AI-powered recognition, RFID-based tracking, and accessible audio interaction.
+**An intelligent, accessible smart wardrobe combining Artificial Intelligence, Generative AI, and RFID technology to empower independent clothing management and personal styling.**
 
-![Platform](https://img.shields.io/badge/platform-iOS-blue)
-![Language](https://img.shields.io/badge/language-Swift-orange)
-![Backend](https://img.shields.io/badge/backend-Firebase-yellow)
-![Hardware](https://img.shields.io/badge/hardware-Raspberry%20Pi-green)
-![Focus](https://img.shields.io/badge/focus-Accessibility-lightgrey)
+![Platform](https://img.shields.io/badge/Platform-iOS-blue)
+![Language](https://img.shields.io/badge/Language-Swift-orange)
+![Backend](https://img.shields.io/badge/Backend-Firebase-yellow)
+![Hardware](https://img.shields.io/badge/Hardware-Raspberry%20Pi-green)
+![AI](https://img.shields.io/badge/AI-Generative%20AI-purple)
+![Focus](https://img.shields.io/badge/Focus-Accessibility-brightgreen)
+![Status](https://img.shields.io/badge/Status-MVP%20%2B%20AI%20Development-blueviolet)
 
-[Demo](PUT_DEMO_LINK_HERE) • [Website](PUT_WEBSITE_LINK_HERE) • [Screenshots](#screenshots) • [Installation](#installation)
+[Website](https://dithar.site) • [Features](#core-features) • [AI Innovation](#generative-ai--intelligent-personal-styling) • [Screenshots](#screenshots)
 
 </div>
 
@@ -21,155 +24,351 @@ An intelligent wardrobe management system designed to simplify clothing organiza
 
 ## Overview
 
-Dithar is a smart wardrobe system that helps users organize clothing items, identify garments more easily, and make outfit decisions with greater efficiency and independence. The project combines a mobile application with AI-based clothing recognition and RFID technology to maintain a real-time clothing inventory and support outfit selection.
+**Dithar** is an AI-powered smart wardrobe designed to help individuals identify, organize, manage, and coordinate their clothing independently.
 
-The system is designed for both ordinary users and visually impaired users. It supports daily wardrobe organization, simplifies clothing retrieval, and improves independence through audio descriptions and accessible interaction.
+The system combines an iOS application, AI-powered clothing recognition, UHF RFID technology, Raspberry Pi, Firebase, and accessible audio interaction to connect physical garments with an intelligent digital wardrobe.
+
+Dithar is designed for everyday users, with a strong focus on empowering **blind and visually impaired individuals** to make independent clothing decisions.
+
+Beyond traditional wardrobe management, Dithar incorporates an evolving **Generative AI and Agentic AI personal styling assistant** that understands Arabic-language styling requests, analyzes clothing compatibility, and develops personalized outfit recommendations using garments the user actually owns.
+
+Our vision is to make clothing identification and personal styling more accessible, independent, and personalized.
 
 ---
 
 ## Project Preview
 
 <div align="center">
-  <img src="screenshots/dithar-cover.png" alt="Dithar Cover" width="260"/>
-  <img src="screenshots/wardrobe.png" alt="Wardrobe Interface" width="260"/>
-  <img src="screenshots/outfits.png" alt="Outfit Interface" width="260"/>
+
+<img src="screenshots/dithar-cover.png" alt="Dithar Cover" width="260"/>
+<img src="screenshots/wardrobe.png" alt="Wardrobe Interface" width="260"/>
+<img src="screenshots/outfits.png" alt="Outfit Interface" width="260"/>
+
 </div>
 
 ---
 
 ## Problem Statement
 
-Choosing what to wear can be time-consuming and frustrating, especially when wardrobes are cluttered or when clothing items are difficult to identify.
+For individuals who are blind or have low vision, choosing what to wear can be a daily accessibility challenge.
 
-For visually impaired individuals, the challenge is even greater because distinguishing colors, patterns, and clothing categories without visual cues often requires help from others. This reduces independence and makes outfit coordination more difficult.
+Identifying clothing colors, patterns, and styles, distinguishing similar garments, locating specific items, and coordinating suitable outfits may require assistance from others.
 
-Dithar addresses this problem by turning a traditional wardrobe into a digital and trackable system that supports clothing recognition, item management, and accessible outfit coordination.
+This dependence can affect personal privacy, confidence, independence, and the freedom to express individual style.
+
+Traditional wardrobe applications primarily rely on visual interfaces and manual clothing selection. Few solutions connect accessible garment identification, physical wardrobe tracking, intelligent styling, and audio interaction in a unified experience.
+
+**Dithar addresses this gap by connecting physical clothing with accessible digital information and intelligent outfit coordination.**
 
 ---
 
-## Solution
+## Our Solution
 
-Dithar provides a smart wardrobe experience through the integration of:
+Dithar transforms a traditional wardrobe into an accessible, connected, and intelligent clothing management system.
 
-- AI-based image recognition for clothing classification
-- RFID-based clothing tracking
-- A mobile app for digital wardrobe management
-- Audio descriptions for visually impaired users
-- Outfit recommendations based on wardrobe contents
-- Social sharing and interaction through community features
+The solution combines:
 
-The system supports both practical organization and inclusive access. Clothing items can be recognized, stored, tagged, searched, filtered, and used to create outfit combinations, while visually impaired users can access garment information through speech output.
+- AI-powered clothing recognition and visual attribute extraction
+- RFID-based physical garment identification
+- Real-time wardrobe inventory tracking
+- Digital clothing organization and management
+- Outfit creation and intelligent recommendations
+- Accessible audio interaction for visually impaired users
+- Community sharing and fashion inspiration
+- Multimodal Generative AI styling capabilities
+- Arabic conversational assistance and personalized styling
+- Adaptive preference learning and intelligent outfit refinement
+
+By connecting digital intelligence with physical garments, Dithar supports more independent clothing identification, management, and personal styling.
 
 ---
 
 ## Target Users
 
-### Ordinary Users
-- Users with overcrowded wardrobes
-- Users who want easier clothing organization
-- Users who need support in selecting outfits quickly
+### Blind and Visually Impaired Users
+- Individuals who need accessible garment identification
+- Users who benefit from spoken clothing descriptions
+- Users who want to coordinate outfits independently
+- Individuals seeking greater privacy and personal autonomy in clothing decisions
 
-### Visually Impaired Users
-- Users who need accessible clothing identification
-- Users who benefit from audio clothing descriptions
-- Users who want greater independence in outfit coordination
+### Everyday Users
+- Individuals seeking easier wardrobe organization
+- Users who want personalized outfit recommendations
+- People who want to make better use of their existing clothing
+- Users interested in smart home technology and AI-powered fashion
 
 ---
 
 ## Core Features
 
-### 1. Add Clothes to the App
-Users can take a photo of a clothing item, after which the AI model automatically analyzes and identifies its:
-- type
-- color
-- pattern
+### 1. AI-Powered Clothing Recognition
 
-After classification, the item can be linked to an RFID tag and saved in the user’s digital wardrobe. Users can later search for items by color, type, or last-used date.
+Dithar uses AI-based image recognition to analyze clothing photographs and identify visual attributes such as:
 
-### 2. RFID-Based Item Tracking
-Each garment can be associated with an RFID tag. A reader scans the tag and links it to the clothing item, enabling future tracking and wardrobe organization.
+- Garment type
+- Color
+- Pattern
+- Clothing category
 
-The RFID reader identifies and tracks garments when they are added to or removed from the wardrobe, while the Raspberry Pi acts as the edge device that reads RFID data and relays it to the application/backend.
+The original clothing recognition system is built around CLIP-based visual understanding.
 
-### 3. Outfit Creator
-Users can browse their digital wardrobe, select clothing items from different categories, arrange them visually, and save complete outfits for future use.
+Fashion-specific vision-language models are also being evaluated to expand clothing analysis and provide richer garment profiles.
 
-Saved outfits may also include tags or notes for occasions such as casual or formal events.
+After recognition, clothing items can be saved in the user's digital wardrobe and associated with RFID tags.
 
-### 4. Match a Similar Outfit
-Through the Explore Page, users can browse outfit posts and use a **Match a Similar Outfit** feature.
+### 2. RFID-Based Clothing Identification and Tracking
 
-The system analyzes the selected outfit, extracts key details such as clothing type and color palette, and searches the user’s own wardrobe for the closest match. When no exact match exists, the system suggests alternatives.
+Each garment can be connected to a unique UHF RFID tag.
 
-### 5. AI-Based Recommendations
-The system generates outfit recommendations based on:
-- stored wardrobe items
-- clothing compatibility
-- user preferences
-- weather
-- occasion type
+The RFID reader and Raspberry Pi identify tagged clothing and connect physical items to their digital wardrobe records.
 
-As users interact more with the system, recommendations become more personalized.
+The system tracks garments entering and leaving the wardrobe, helping users understand clothing availability.
 
-### 6. Accessibility Support
-A core objective of Dithar is to support visually impaired users through auditory descriptions of clothing items and audio interaction using text-to-speech.
+When a tagged garment is presented to the reader, Dithar can identify the item and provide access to its stored information.
 
-### 7. Community Interaction
-Dithar also includes social features that allow users to:
-- share favorite outfits
-- like and comment on shared looks
-- browse community inspiration
+This is particularly valuable for visually impaired users who may have difficulty distinguishing similar garments through touch alone.
 
-These features promote engagement and provide additional outfit ideas.
+### 3. Digital Wardrobe Management
+
+Users can organize their clothing collection through the iOS application.
+
+The digital wardrobe supports:
+
+- Adding clothing items
+- Clothing categorization
+- RFID linking
+- Searching and filtering
+- Clothing availability tracking
+- Accessing garment information
+- Organizing personal wardrobe collections
+
+### 4. Outfit Creator
+
+Users can manually create complete outfits using garments from their digital wardrobe.
+
+Outfits can be arranged, saved, and organized for future use.
+
+Users can also create outfit collections for different occasions and personal needs.
+
+### 5. Match a Similar Outfit
+
+Through the Explore feature, users can discover outfit inspiration from community posts.
+
+The **Match a Similar Outfit** feature analyzes the selected look and searches the user's existing wardrobe for similar garments.
+
+The system uses clothing attributes to identify matching items and suggest available alternatives.
+
+### 6. Outfit Recommendations
+
+Dithar provides outfit recommendation functionality based on wardrobe contents and clothing information.
+
+The recommendation system is being expanded with multimodal AI to improve visual coordination, contextual suitability, and personalized outfit selection.
+
+### 7. Accessibility and Audio Interaction
+
+Accessibility is a fundamental part of Dithar's design.
+
+The application provides two complementary audio accessibility options:
+
+**Apple VoiceOver**
+- Supports screen-reader navigation
+- Makes interface elements accessible through spoken feedback
+- Helps visually impaired users interact with the application
+
+**Dithar Audio Description System**
+- Uses Apple's AVSpeechSynthesizer
+- Provides spoken descriptions and interface information
+- Offers an independent audio accessibility option
+
+Together with RFID-based garment identification, these capabilities help visually impaired users recognize and manage their clothing without relying entirely on visual interaction.
+
+### 8. Community Interaction
+
+Dithar includes community features that allow users to:
+
+- Share outfit posts
+- Explore clothing inspiration
+- Like and comment on shared looks
+- Discover styling ideas
+- Interact with other users
+
+These features support social engagement and personal fashion exploration.
+
+---
+
+## Generative AI & Intelligent Personal Styling
+
+Dithar is extending its existing smart wardrobe functionality through an advanced **Generative AI and Agentic AI personal styling system**.
+
+The system builds upon the project's existing clothing recognition capabilities and introduces multimodal fashion understanding, contextual outfit planning, and personalized styling assistance.
+
+This development aims to make visual fashion decisions more accessible to blind and visually impaired individuals.
+
+### Multimodal Fashion Understanding
+
+Dithar's AI development integrates specialized vision-language models, including **FashionSigLIP**, to analyze clothing characteristics and construct structured garment profiles.
+
+**Qwen3-VL** is being integrated and evaluated for multimodal fashion reasoning, including:
+
+- Visual harmony between garments
+- Clothing compatibility
+- Outfit composition
+- Layering and styling decisions
+- Occasion suitability
+- Coordinated outfit recommendations
+
+Unlike simple color-matching systems, the goal is to evaluate complete outfits and their overall visual coherence.
+
+### Arabic Conversational AI Stylist
+
+Dithar's evolving intelligent styling assistant combines LLM capabilities, including Google Gemini integration, with wardrobe-aware tools.
+
+The assistant is designed to understand natural Arabic styling requests.
+
+For example:
+
+> "أبي لوك مرتب ومريح للجامعة، بدون كعب."
+
+The assistant interprets the user's styling requirements, retrieves relevant wardrobe items, and generates outfit recommendations.
+
+The system is also being developed to support conversational adjustments, such as:
+
+> "غير الحذاء، وأضف جاكيت، وخله رسمي أكثر."
+
+This enables users to refine outfits according to their needs rather than relying entirely on predefined recommendations.
+
+### Agentic AI Architecture
+
+Dithar's Agentic AI architecture connects language understanding, wardrobe information, outfit planning, and recommendation validation.
+
+Its core responsibilities include:
+
+- Understanding the user's styling intent
+- Identifying occasions and clothing requirements
+- Retrieving garments from the user's actual wardrobe
+- Planning coordinated outfits
+- Evaluating visual and contextual compatibility
+- Respecting user preferences and restrictions
+- Refining recommendations through conversation
+- Providing understandable explanations
+
+The objective is to create a wardrobe-aware intelligent assistant rather than a generic fashion chatbot.
+
+### Adaptive Personalization
+
+Dithar is developing preference-learning capabilities that use:
+
+- Preferred clothing items
+- Saved outfit selections
+- User feedback
+- Rejected suggestions
+- Styling preferences
+
+These signals will help the assistant progressively adapt recommendations to individual tastes.
+
+### Reliable and Wardrobe-Aware Recommendations
+
+The AI architecture incorporates validation mechanisms designed to:
+
+- Recommend only garments that exist in the user's wardrobe
+- Respect required and excluded items
+- Check outfit completeness
+- Consider occasion suitability
+- Identify missing or uncertain garment information
+
+These checks help ensure that AI-generated recommendations remain practical and grounded in the user's clothing collection.
+
+### Accessible AI Styling
+
+Dithar connects intelligent styling with its audio accessibility and RFID technologies.
+
+The goal is to enable visually impaired users to understand recommended outfits through spoken descriptions and identify the corresponding physical garments.
+
+This bridges the gap between digital fashion recommendations and independent real-world clothing selection.
+
+### AI Development Status
+
+**Implemented MVP:**
+- iOS smart wardrobe application
+- CLIP-based clothing recognition
+- RFID garment identification and tracking
+- Digital wardrobe management
+- Outfit management and recommendation features
+- VoiceOver and independent audio accessibility
+- Community features
+
+**AI Research and Active Development:**
+- FashionSigLIP-based garment understanding
+- Multimodal styling with Qwen3-VL
+- Arabic natural-language request understanding
+- Agentic AI tool orchestration
+- Conversational outfit refinement
+- Feedback-driven personalization
+- Advanced outfit validation and ranking
+
+The advanced AI modules are being developed, integrated, and evaluated. They are not yet presented as fully validated production features.
 
 ---
 
 ## System Architecture
 
 <div align="center">
-  <img src="docs/architecture.jpeg" alt="Dithar System Architecture" width="780"/>
+
+<img src="docs/architecture.jpeg" alt="Dithar System Architecture" width="780"/>
+
 </div>
 
-Dithar combines a mobile application, AI recognition, cloud data management, and RFID hardware into one integrated system. The overall system flow includes clothing image capture, AI-based classification, RFID tag linking, digital wardrobe storage, and user-facing outfit management.
+### Existing Smart Wardrobe Architecture
+
+The existing system connects:
+
+1. The iOS application
+2. AI-based clothing recognition
+3. Firebase cloud services
+4. RFID-tagged garments
+5. UHF RFID reader and Raspberry Pi
+6. Audio accessibility technologies
+
+### Evolving AI Architecture
+
+The Generative AI extension introduces a modular intelligence layer:
+
+**Clothing Images → Visual Understanding → Structured Garment Profiles → Wardrobe-Aware Outfit Planning → Multimodal AI Styling → Recommendation Verification → Accessible Outfit Explanations**
+
+An Agentic AI layer coordinates user requests, wardrobe information, styling tools, and personalization.
+
+The original system architecture diagram represents the smart wardrobe MVP, while the advanced AI capabilities remain under development.
 
 ---
 
 ## System Workflow
 
 <div align="center">
-  <img src="docs/workflow.jpeg" alt="Dithar System Workflow" width="780"/>
+
+<img src="docs/workflow.jpeg" alt="Dithar System Workflow" width="780"/>
+
 </div>
 
-The workflow begins when a user captures a clothing image. The system then recognizes the clothing item, optionally allows the user to modify additional details, supports RFID linking, and finally saves the clothing item into the wardrobe system.
+### Clothing Registration
 
----
-## Project Objectives
+1. The user adds a garment image.
+2. AI analyzes the clothing characteristics.
+3. The garment information is saved in the digital wardrobe.
+4. The item is linked to an RFID tag.
+5. The physical garment can be identified through the reader.
 
-### Product Objectives
-The project aims to:
-- manually arrange and save outfits
-- track whether clothing items are inside or outside the closet
-- recognize clothing items automatically
-- add and link clothing items with RFID tags
-- support visually impaired users with auditory descriptions
-- generate outfit recommendations
-- allow community sharing
-- enable likes and comments
-- provide search and filtering options
-- save custom outfits for specific events
+### Intelligent Styling Workflow
 
-### Development Objectives
-The project development includes:
-- identifying and evaluating AI models for clothing recognition
-- purchasing and testing RFID equipment and Raspberry Pi
-- designing and implementing the database
-- connecting Raspberry Pi with the RFID reader
-- connecting Raspberry Pi with the database
-- designing the user interface
-- developing the iOS app using Xcode
-- implementing recommendation logic
-- integrating AVSpeechSynthesizer
-- conducting application testing
+The developing AI styling workflow includes:
+
+1. Receiving an Arabic styling request.
+2. Understanding the occasion, preferences, and requirements.
+3. Retrieving available garments.
+4. Generating complete outfit candidates.
+5. Evaluating and refining recommendations.
+6. Verifying selected garments and constraints.
+7. Presenting personalized outfit recommendations.
+8. Supporting accessible explanations and user feedback.
 
 ---
 
@@ -179,29 +378,45 @@ The project development includes:
 - Swift
 - SwiftUI
 - Xcode
-- iOS application development
+- iOS
 
-### Database and Cloud Services
+### Cloud and Database
+- Firebase Authentication
 - Firebase Firestore
 - Firebase Storage
-- Firebase Authentication
 
-### AI and Recognition
+### AI and Computer Vision
 - CLIP-based clothing recognition
-- Google Vision API
-- DeepFashion-based clothing analysis
-- Rule-based recommendation logic
+- Python
+- PyTorch
+- FashionSigLIP — fashion understanding experiments
+- Rule-based outfit and occasion logic
+
+### Generative AI and Agentic Intelligence
+- Google Gemini — LLM integration
+- Qwen3-VL — multimodal styling development
+- LLM-based agent orchestration
+- Natural-language intent understanding
+- Outfit evaluation and recommendation validation
+- Adaptive personalization architecture
 
 ### Accessibility
-- AVSpeechSynthesizer (Text-to-Speech)
-- VoiceOver support
+- Apple VoiceOver
+- AVSpeechSynthesizer
+- Spoken clothing descriptions
+- Accessible interface navigation
 
-### Hardware Integration
+### IoT and Hardware
 - UHF RFID Reader
 - UHF RFID Tags
 - Raspberry Pi
-- Python scripts for hardware communication
-- Visual Studio Code for Raspberry Pi integration
+- Python-based hardware communication
+
+### Development Tools
+- Xcode
+- Visual Studio Code
+- Git and GitHub
+- Google Colab for AI experimentation
 
 ---
 
@@ -212,54 +427,81 @@ The project development includes:
 - UHF RFID Tags
 - Raspberry Pi
 - iPhone test device
+- GPU-enabled development environment for AI experimentation
 
 ### Software
-- Xcode IDE
+- Xcode
 - Firebase
-- CLIP-based recognition
-- AVSpeechSynthesizer
+- Python
+- PyTorch
+- AI vision-language models
+- Google Colab
 - Visual Studio Code
 
 ---
 
 ## Results and Project Value
 
-Dithar delivers value in several ways:
+Dithar brings together accessible technology, IoT, and artificial intelligence to support everyday clothing decisions.
 
-- improves wardrobe organization
-- reduces time spent choosing outfits
-- supports more efficient use of stored clothes
-- reduces reliance on others for visually impaired users
-- enables more confident outfit coordination
-- supports social sharing and inspiration
-- combines accessibility, RFID tracking, and AI within one integrated system
+The system:
+
+- Improves digital wardrobe organization
+- Connects physical garments to accessible information
+- Enables RFID-based garment tracking
+- Supports clothing recognition through AI
+- Provides accessible audio interaction
+- Facilitates outfit creation and management
+- Encourages greater independence for visually impaired users
+- Supports personal expression and privacy
+- Offers community-based styling inspiration
+
+The ongoing Generative AI development extends these capabilities toward more intelligent, personalized, and conversational outfit recommendations.
+
+### Real-World Impact
+
+Dithar aims to reduce reliance on sighted assistance by enabling blind and visually impaired users to independently identify, understand, and coordinate their clothing.
+
+The project's accessibility impact can be evaluated through:
+
+- Independent garment identification
+- Successful outfit selection
+- Task completion time
+- Accessible navigation performance
+- User satisfaction and feedback
+- Independence in everyday wardrobe activities
+
+Our long-term goal is to make personal styling a more independent, inclusive, and empowering experience.
 
 ---
 
 ## Screenshots
 
 <div align="center">
-  <img src="screenshots/wardrobe.png" alt="Wardrobe Interface" width="260"/>
-  <img src="screenshots/outfits.png" alt="Outfit Interface" width="260"/>
-</div>
 
-<br>
+<img src="screenshots/wardrobe.png" alt="Wardrobe Interface" width="260"/>
+<img src="screenshots/outfits.png" alt="Outfit Interface" width="260"/>
+
+</div>
 
 <div align="center">
-  <img src="screenshots/community.png" alt="Community Interface" width="260"/>
-  <img src="screenshots/voice.png" alt="Accessibility Interface" width="260"/>
+
+<img src="screenshots/community.png" alt="Community Interface" width="260"/>
+<img src="screenshots/voice.png" alt="Accessibility Interface" width="260"/>
+
 </div>
+
+---
+
 ## Team
 
-Prepared by:
-
+**Developed by:**
 - Rahaf AlFantoukh
 - Hadeel Almutairi
 - Maha Alswed
 - Fatimah Alsufaian
 
-Supervised by:
-
+**Supervised by:**
 - Dr. Wejdan Alkhaldi
 
 ---
@@ -272,8 +514,12 @@ Supervised by:
 
 ---
 
-Developed as a graduation project focused on accessible technology, smart wardrobe management, and inclusive fashion support.
+## Project Website
 
+https://dithar.site
 
+---
 
+**Dithar — Making Clothing Independence Accessible Through AI and IoT.**
 
+Developed as a graduation project and continuously evolving toward intelligent, accessible, and personalized wardrobe assistance.
