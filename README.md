@@ -16,7 +16,7 @@
 ![Focus](https://img.shields.io/badge/Focus-Accessibility-brightgreen)
 ![Status](https://img.shields.io/badge/Status-MVP%20%2B%20AI%20Development-blueviolet)
 
-[Website](https://dithar.site) • [Features](#core-features) • [AI Innovation](#generative-ai--intelligent-personal-styling) • [Screenshots](#screenshots)
+
 
 </div>
 
